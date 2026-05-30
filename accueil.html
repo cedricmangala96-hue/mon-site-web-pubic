@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="fr_FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ir.Cédric Mangala - Dévéloppeur web full-stack" />
+	<link rel="canonical" href="https://www.IrCedricMangala.io/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Accueil IrCedricMangala - dévéloppeur web full-stack" />
+	<meta property="og:description" content="Accueil IrCedricMangala" />
+	<meta property="og:url" content="https://www.IrCedricMangala.io/" />
+	<meta property="og:site_name" content="Ir.Cedric Mangala by MangalaxySoft/ agence web de génie logiciel" />
+
+    <title>Ir.Cédric Mangala-Horizon | Dévéloppeur web full-stack</title>
+    <link rel="icon" type="image/x-icon" href="ZDM.PNG">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #0f172a;
+            --accent: #22c55e;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Animations personnalisées */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background:#0f172a;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #e0f2fe, #ffffff);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .pulse-soft {
+            animation: pulse-soft 2s infinite;
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .custom-loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #appointment-success {
+            display: none;
+        }
+     
+        .hidden a{
+            margin-left: 500px;
+            font-size: 15px;
+            color: white;
+            transition: 0.3s;
+            font-family: 'jakarta plus',sans-serif;
+            font-weight: bold;
+            text-transform:uppercase;
+        }
+        .hidden a:hover{
+            text-decoration: underline;
+
+        }
+
+        @media (max-width:1280px) {
+           .hidden a{
+            display: none;
+                
+            }
+            
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Preloader -->
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-500">
+        <div class="custom-loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-slate-800 tracking-tight"><span class="text-sky-500">Ir. Cédric Mangala</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 items-center font-medium text-slate-600">
+                <a href="apropos.html" class="hover:text-sky-500 transition-colors">C'est que je fais !</a>
+                <a href="index.html" class="hover:text-sky-500 transition-colors">Apropos De Moi</a>
+                <a href="#services" class="hover:text-sky-500 transition-colors">Services</a>
+                <a href="#appointment-form" class="hover:text-sky-500 transition-colors">Consultation</a>
+                
+                
+            </div>
+            <a href="contact.html" class="bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-600 transition-all shadow-md hover:shadow-lg">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="min-h-screen flex items-center hero-gradient pt-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="bg-sky-100 text-sky-600 px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider mb-6 inline-block">Votre satisfaction, c'est ma priorité.</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
+                    Dévéloppeur Web <span class="text-sky-500">freelance</span> à votre dispositon.
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Avoir un site internet est crucial pour dévélopper l'activité de votte entréprise, Quelque soit votre secteur d'activité.
+
+                    Un site web constitue une vitrine qui vous permettra de gagner en visibilité auprès de vos prospects, fidéliser vos clients et d'augmenter votre chiffre d'affaire.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="index.html" class="px-8 py-4 bg-sky-500 text-white rounded-2xl font-bold shadow-xl shadow-sky-200 hover:bg-sky-600 transition-all text-center">à Propos De Moi</a>
+                    <a href="apropos.html" class="px-8 py-4 bg-white text-slate-800 border border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center">C'est que je fais !</a>
+                </div>
+                
+                <div class="mt-12 flex items-center space-x-6">
+                    <div class="flex -space-x-4">
+                        <img src="Untitled44.jpg" class="w-12 h-12 rounded-full border-4 border-white" alt="Doctor 1">
+                        <img src="https://i.pravatar.cc/100?u=2" class="w-12 h-12 rounded-full border-4 border-white" alt="Doctor 2">
+                        <img src="ronas.jpg" class="w-12 h-12 rounded-full border-4 border-white" alt="Doctor 3">
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-slate-900">+25</p>
+                        <p class="text-xs text-slate-500">Prêts à vous aider.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative reveal">
+                <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sky-100 rounded-full blur-3xl opacity-50"></div>
+                <img src="cedaa.PNG" 
+                     class="rounded-[2.5rem] shadow-2xl pulse-k   hisoft" 
+                     alt="">
+                
+                <!-- Floating Info Box -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-2xl reveal border border-slate-100 hidden sm:block">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-900 font-bold">Disponible 24h/24</p>
+                            <p class="text-slate-500 text-sm">Réponse instantanée</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="reveal">
+                <p class="text-4xl font-bold text-sky-400 mb-2 counter" data-target="500">0</p>
+                <p class="text-slate-400">Orientations & Collaborations</p>
+            </div>
+            <div class="reveal">
+                <p class="text-4xl font-bold text-sky-400 mb-2 counter" data-target="150">0</p>
+                <p class="text-slate-400">Clients satisfaits</p>
+            </div>
+            <div class="reveal">
+                <p class="text-4xl font-bold text-sky-400 mb-2 counter" data-target="5"></p>
+                <p class="text-slate-400">Expérience +5ans</p>
+            </div>
+            <div class="reveal">
+                <p class="text-4xl font-bold text-sky-400 mb-2 counter" data-target="100">0</p>
+                <p class="text-slate-400">% Qualité</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Services spécialisés</h2>
+                <div class="w-20 h-1.5 bg-sky-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto italic">
+                    "Une technologie de pointe au service de votre entréprise."
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cardiologie -->
+                <div class="service-card p-8 rounded-[2rem] bg-slate-50 border border-slate-100 reveal">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="fas fa-computer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Dévéloppement web full-stack | supports téchniques</h3>
+                    <p class="text-slate-600 mb-6">HTML, CSS, talwindCss, Bootstrapp, Wordpress, Canva, Figma, Flutter, Javascript, Next.js, React Native, Node.js, PHP & PhpMyAdmin, laravel Et intégration des fonctionnalités IA.</p>
+                    <a href="#" class="text-sky-500 font-bold flex items-center group">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Pédiatrie -->
+                <div class="service-card p-8 rounded-[2rem] bg-slate-50 border border-slate-100 reveal">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Bases de données</h3>
+                    <p class="text-slate-600 mb-6">Analyse et conception de bases de données structurées pour garantir la disponibilité, la sécurité, la performance et l'intégrité des données d'une entreprise.</p>
+                    <p class="text-slate-600 mb-6">SQL server et MySQL.</p>
+                    <a href="#" class="text-sky-500 font-bold flex items-center group">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Neurologie -->
+                <div class="service-card p-8 rounded-[2rem] bg-slate-50 border border-slate-100 reveal">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Mainténance & réseaux</h3>
+                    <p class="text-slate-600 mb-6">Internet (Google), Installation & désinstallation d'un reseau peer to peer, dépannage des ordinateurs, dépannage de logiciel système (windows et android).</p>
+                    <a href="#" class="text-sky-500 font-bold flex items-center group">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="contact" class="py-24 bg-sky-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-[3rem] shadow-2xl overflow-hidden reveal flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-sky-500 p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6">Prêt à me consulter ?</h2>
+                    <p class="mb-8 text-sky-100">Remplissez le formulaire et moi je vous contacterai dans les heures qui suivent pour confirmer votre demande.</p>
+                    <p class="mb-8 text-sky-100">Sinon, vous pouvez directement me lancer une discussion sur whatsapp ou sur un appel direct.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone"></i>
+                            <span>+243 81 61 92 609</span>
+                            <span>+243 85 06 06 781</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope"></i>
+                            <span>cedricmangala96@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Avenue : De la montagne, réfférence: Haute tension, N°XXX, Quartier : Joli Park, Commune: Ngaliema/ Kinshasa RD - Congo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 p-12">
+                    <div class="appointment-form" id="appointment-form">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Nom Complet</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all" placeholder="XXX XXX XXX">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Demande d'un service en Urgence!</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all">
+                                    <option>Network user analyst</option>
+                                    <option>Site web profféssionnel</option>
+                                    <option>Site web personnel (pour usage unique & personnel)</option>
+                                    <option>Site web d'entréprise</option>
+                                    <option>Site web pour un magasin (Boutique, dépot)</option>
+                                    <option>Site web journal</option>
+                                    <option>Site web pour une école</option>
+                                    <option>Site web universitaire</option>
+                                    <option>Site web pour une église</option>
+                                    <option>Site web pour un centre médical</option>
+                                    <option>Site web pour ONG</option>
+                                    <option>Site web pour un restaurant</option>
+                                    <option>Site web pour un flat hotel</option>
+                                    <option>Site web publicitaire</option>
+                                    <option>Site vitrine</option>
+                                    <option>Site web pour une agence immobilière</option>
+                                    <option>Site web pour location des véhicules</option>
+                                    <option>Site web pour une agence de voyage</option>
+                                    <option>Application web</option>
+                                    <option>Application mobile</option>
+                                    <option>logiciel de gestion</option>
+                                    <option>Dépannage d'un logiciel Système(windows & Android)</option>
+                                    <option>Dépannagde des Ordinateurs</option>
+                                    <option>Installation d'un réseau Poste à Poste</option>        
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Message (Optionnel)</label>
+                                <textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all" rows="3"></textarea>
+                            </div>
+                            <button onclick="submitForm()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition-all transform active:scale-95">
+                                Confirmer votre demande
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="appointment-success" class="text-center py-12">
+                        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Demande Envoyée !</h3>
+                        <p class="text-slate-600">Nous reviendrons vers vous très prochainement pour la suite de votre demande, Merci !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center text-white">
+                        <i class="fas fa-plus-square"></i>
+                    </div>
+                    <span class="text-xl font-bold text-slate-800"> Ingénieur Cédric Mangala - Horizon</span>
+                </div>
+                
+                <div class="flex space-x-6 text-slate-400">
+                    <a href="https://www.facebook.com/rayzoncedrick.mangalaxy.7" class="hover:text-sky-500 transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://x.com/CedricMangala" class="hover:text-sky-500 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://www.linkedin.com/feed/" class="hover:text-sky-500 transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-50 text-center text-slate-500 text-sm">
+                copyright; 2024 Ir. Cédric Mangala - Horizon | Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
+        // Animation de révélation au défilement (Scroll Reveal)
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Animation des compteurs (Stats)
+        const counters = document.querySelectorAll('.counter');
+        const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    const target = +entry.target.getAttribute('data-target');
+                    let count = 0;
+                    const speed = 2000 / target; // Durée fixe de 2s
+
+                    const updateCount = () => {
+                        const increment = target / 100;
+                        if (count < target) {
+                            count += increment;
+                            entry.target.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            entry.target.innerText = target + (target === 100 ? '%' : '');
+                            entry.target.classList.add('counted');
+                        }
+                    };
+                    updateCount();
+                }
+            });
+        });
+
+        counters.forEach(counter => countObserver.observe(counter));
+
+        // Simulation de soumission de formulaire
+        function submitForm() {
+            const form = document.getElementById('appointment-form');
+            const success = document.getElementById('appointment-success');
+            
+            form.style.opacity = '0.5';
+            form.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.style.display = 'block';
+            }, 1000);
+        }
+
+        // Effet parallaxe léger sur l'image hero
+        document.addEventListener('mousemove', (e) => {
+            const img = document.querySelector('.pulse-soft');
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            img.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body>
+</html>

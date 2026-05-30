@@ -1,0 +1,158 @@
+/* Importing Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 15px;
+  background: darkblue;
+  overflow: hidden;
+}
+.span1{
+  color: orangered;
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 500px;
+  min-height: 800px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 50px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title {
+  height: 120px;
+  background: darkblue;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 50px 1px rgb(152, 152, 160);
+}
+
+.wrapper form {
+  padding: 25px 35px;
+}
+
+.wrapper form .row {
+  height: 60px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.wrapper form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 70px;
+  border-radius: 5px;
+  border: 5px solid darkblue;
+  border-radius: 15px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+.wrapper form .row input:hover{
+    border: 5px solid darkblue;
+    box-shadow: 0. 5rem 1rem rgb(49, 49, 49);
+    box-shadow: 0 .5rem 3rem rgb(49, 49, 49);
+    transition: 0.3s, transform 0.2s;
+}
+.wrapper form .row textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 70px;
+  border-radius: 5px;
+  border: 5px solid darkblue;
+  border-radius: 15px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+.wrapper form .row textarea:hover{
+  border: 5px solid darkblue;
+  box-shadow: 0. 5rem 1rem rgb(49, 49, 49);
+  box-shadow: 0 .5rem 3rem rgb(49, 49, 49);
+  transition: 0.3s, transform 0.2s;
+}
+form .row input:focus {
+  border-color: darkblue;
+}
+
+form .row input::placeholder {
+  color: #999;
+}
+
+.wrapper form .row i {
+  position: absolute;
+  width: 55px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: darkblue;
+  border: 1px solid darkblue;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper form .pass img{
+ margin-left: 75px;
+ border-radius: 50%;
+}
+
+.wrapper form .pass a {
+  color: darkblue;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wrapper form .pass a:hover {
+  text-decoration: underline;
+}
+
+.wrapper form .button input {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: darkblue;
+  border: 5px solid darkblue;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+form .button input:hover {
+  background: darkblue;
+}
+
+.wrapper form .signup-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 10px;
+}
+
+.wrapper form .signup-link a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+form .signup-link a:hover {
+  text-decoration: underline;
+}
